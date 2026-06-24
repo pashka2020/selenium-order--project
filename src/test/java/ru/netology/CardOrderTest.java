@@ -26,14 +26,14 @@ class CardOrderTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
-        options.addArguments("--headless"); // Обязательно для работы в GitHub Actions
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }
 
     @AfterEach
     void tearDown() {
         if (driver != null) {
-            driver.quit(); // Закрываем браузер после каждого теста
+            driver.quit();
         }
     }
 
